@@ -1,0 +1,123 @@
+@media (max-width: 957px) {
+
+    .mai.main-section .black-h-content{
+    background-image: url("../assets/images/use-cases-images/bg-small.svg");
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+}
+n-section .black-header .black-h-content .text {
+        background-color: transparent;
+        font-size: 1.5em;
+        letter-spacing: 1px;
+        overflow: hidden;
+        white-space: nowrap;
+        border-right: 2px solid;
+        width: 27.2ch;
+        animation: typing 3s steps(29),
+        cursor .4s step-end infinite alternate;
+    }
+
+    .header .nav .nav-content .mods .dl-mod {
+        display: none;    
+    }
+
+    .header .nav .nav-content .mods a .bars {
+       display: block; 
+    }
+
+    .header .nav .nav-content .nav-list {
+        position: relative;
+    }
+
+    .header .nav .nav-content .nav-list ul {
+        display: block;
+        position: absolute;
+        text-align: center;
+        left: 75px;
+        top: 20px;
+        width: 170px;
+        box-shadow: 0px 1px 10px 2px #323243;
+    }
+
+    .header .nav .nav-content .nav-list ul li {
+       padding: 10px; 
+       margin-right: 30px;
+    }
+
+    .header .nav .nav-content .nav-list ul li:first-child{
+        padding-top: 20px;
+    }
+
+    .header .nav .nav-content .nav-list ul li:last-child {
+        padding-bottom: 20px;
+    }
+
+    .header .nav .nav-content .nav-list ul li:hover {
+        background-color: #323234;
+    }
+
+    .header .nav .nav-content .nav-list ul a {
+
+    }
+
+    .header .nav .nav-content .s-nav-list {
+        display: none;
+    }
+
+    .main-section .header-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        justify-content: center;
+    }
+    .main-section .header-content .header-disc {
+        margin-top: 30px;
+        line-height: 10px;
+        text-align: center;
+    }
+
+    .main-section .header-content .header-disc p {
+    }
+        
+    .main-section .header-content .header-image img {
+        width: 170px;
+        margin-top: 40px;
+        border-radius: 50%;
+        outline: 10px solid var(--secondary-color)
+    }
+
+
+}
+
+
+/* @media (min-width: 878px) { */
+/*     .container-fluid { */
+/*         width: 70%; */
+/*         margin: auto; */
+/*         height: 100%; */
+/*     } */
+/*     .container { */
+/*         width: 60%; */
+/*         margin: auto; */
+/*         height: 100%; */
+/*     } */
+
+/*     .header .nav .nav-content .mods { */
+/*         font-size: 19px; */
+/*         color: var(--main-font-color); */
+/*         margin-right: 50px; */
+/*     } */
+/* } */
+
+
+@media (max-width: 999px ) {
+    .header .nav .nav-content .s-nav-list ul {
+        display: flex;
+        margin-right: 150px;
+    }
+}
+
