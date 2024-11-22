@@ -245,10 +245,26 @@
     margin-top: 40px;
 }
 
+.main .skill-section .hobby-section {
+    margin-top: 40px;
+}
+
+.hobby-desc p {
+    font-size: 18px;
+    line-height: 30px;
+}
+
+.hobby-desc a{ 
+}
+
 .skill-section .skill-content h2 {
     width: fit-content;
     position: relative;
     margin-bottom: 20px;
+}
+
+.skill-section .skill-content a {
+    color: var(--third-color)
 }
 
 .skill-section .skill-content h2:after {
