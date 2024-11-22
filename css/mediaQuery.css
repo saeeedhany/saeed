@@ -13,7 +13,7 @@
 }
 n-section .black-header .black-h-content .text {
         background-color: transparent;
-        font-size: 1.5em;
+        font-size: 2em;
         letter-spacing: 1px;
         overflow: hidden;
         white-space: nowrap;
@@ -33,10 +33,10 @@ n-section .black-header .black-h-content .text {
 
     .header .nav .nav-content .nav-list {
         position: relative;
+        display: none;
     }
 
     .header .nav .nav-content .nav-list ul {
-        display: block;
         position: absolute;
         text-align: center;
         left: 75px;
@@ -121,12 +121,12 @@ n-section .black-header .black-h-content .text {
 @media only screen and (max-width: 1000px){
     /*Tablets [601px -> 1200px]*/
 	container-fluid { */
-        width: 85%;
+        width: 75%;
         margin: auto;
         height: 100%;
     }
     .container {
-        width: 80%;
+        width: 60%;
         margin: auto;
         height: 100%;
     }
