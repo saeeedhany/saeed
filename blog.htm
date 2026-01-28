@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Blog - Saeed Hany</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <link rel="stylesheet" href="css/style.css" />
+    </head>
+    <body>
+        <!-- Header -->
+        <header>
+            <nav>
+                <a href="index.html" class="logo">Saeed Hany</a>
+                <ul class="nav-links">
+                    <li><a href="index.html#about">About Me</a></li>
+                    <li class="pages"><a href="projects.html">Projects</a></li>
+                    <li><a href="blog.html" class="active">Blog</a></li>
+                    <li class="social-icons">
+                        <a href="https://github.com/saeeedhany" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                        <a href="#" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                        <a href="#" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    </li>
+                    <li class="left">
+                        <button class="theme-toggle" aria-label="Toggle theme">
+                            <i class="fas fa-sun"></i>
+                        </button>
+                        <button class="mobile-menu-btn" aria-label="Toggle menu">
+                            <i class="fas fa-bars"></i>
+                        </button>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- Mobile Sidebar -->
+        <div class="mobile-sidebar">
+            <h3>On this page</h3>
+            <ul class="sidebar-nav">
+                <li><a href="#recent">Recent Posts</a></li>
+                <li><a href="#systems">Systems & Low-Level</a></li>
+                <li><a href="#webdev">Web Development</a></li>
+                <li><a href="#tools">Tools & CLI</a></li>
+                <li><a href="#thoughts">Thoughts & Learning</a></li>
+            </ul>
+            <ul class="nav-mobile-links">
+                <li class="pages"><a href="index.html#about">About Me</a></li>
+                <li class="pages"><a href="projects.html">Projects</a></li>
+                <li class="pages"><a href="blog.html">Blog</a></li>
+                <li class="social-icons">
+                    <a href="https://github.com/saeeedhany" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="#" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    <a href="#" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="overlay"></div>
+
+        <!-- Main Container -->
+        <div class="container">
+            <!-- Main Content -->
+            <main>
+                <section id="blog-intro">
+                    <h1>Blog</h1>
+                    <p>
+                        Writing about systems programming, web development, CLI tools, and the journey of understanding 
+                        how things work under the hood.
+                    </p>
+                    <p>
+                        Most of my technical writing lives on <a href="https://saeeedhany.github.io/sigfault.log/" target="_blank"><strong>sigfault.log</strong></a>, 
+                        with some Arabic content on <a href="https://saeeedhany.github.io/takallam/" target="_blank"><strong>Takallam</strong></a>.
+                    </p>
+
+                    <!-- Filter Tags -->
+                    <div class="filter-section">
+                        <div class="filter-tags">
+                            <button class="filter-tag active" data-tag="all">All</button>
+                            <button class="filter-tag" data-tag="Linux">Linux</button>
+                            <button class="filter-tag" data-tag="Systems Programming">Systems Programming</button>
+                            <button class="filter-tag" data-tag="CLI">CLI</button>
+                            <button class="filter-tag" data-tag="Python">Python</button>
+                            <button class="filter-tag" data-tag="C">C</button>
+                            <button class="filter-tag" data-tag="Web">Web</button>
+                            <button class="filter-tag" data-tag="CSS">CSS</button>
+                            <button class="filter-tag" data-tag="Workflow">Workflow</button>
+                            <button class="filter-tag" data-tag="Philosophy">Philosophy</button>
+                            <button class="filter-tag" data-tag="Terminal">Terminal</button>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="recent">
+                    <h2>Recent Posts</h2>
+                    
+                    <article class="blog-post" data-tags="Linux,Systems Programming,Kernel">
+                        <h3 id="post-1">
+                            <a href="#">Understanding Linux Process Management</a>
+                            <span class="highlight">(Jan 2026)</span>
+                        </h3>
+                        <p>
+                            Deep dive into how the Linux kernel manages processes, exploring scheduling algorithms, 
+                            context switching, and the relationship between threads and processes.
+                        </p>
+                        <div class="post-tags">
+                            <span class="tag">Linux</span>
+                            <span class="tag">Systems Programming</span>
+                            <span class="tag">Kernel</span>
+                        </div>
+                    </article>
+
+                    <article class="blog-post" data-tags="CLI,UX,Python">
+                        <h3 id="post-2">
+                            <a href="#">Building CLI Tools That People Actually Use</a>
+                            <span class="highlight">(Dec 2025)</span>
+                        </h3>
+                        <p>
+                            Lessons learned from building deasy and yduts — focusing on user experience in the terminal, 
+                            sensible defaults, and making powerful tools approachable.
+                        </p>
+                        <div class="post-tags">
+                            <span class="tag">CLI</span>
+                            <span class="tag">UX</span>
+                            <span class="tag">Python</span>
+                        </div>
+                    </article>
+
+                    <article class="blog-post" data-tags="Workflow,Terminal,Philosophy">
+                        <h3 id="post-3">
+                            <a href="#">Why I Switched to Terminal-First Workflows</a>
+                            <span class="highlight">(Nov 2025)</span>
+                        </h3>
+                        <p>
+                            Exploring the benefits of terminal-based development environments, scriptable workflows, 
+                            and the philosophy behind minimalist tooling.
+                        </p>
+                        <div class="post-tags">
+                            <span class="tag">Workflow</span>
+                            <span class="tag">Terminal</span>
+                            <span class="tag">Philosophy</span>
+                        </div>
+                    </article>
+                </section>
+
+                <section id="systems">
+                    <h2>Systems & Low-Level</h2>
+                    
+                    <article class="blog-post" data-tags="C,Memory,Low-Level">
+                        <h3 id="post-4">
+                            <a href="#">Memory Management in C: Beyond malloc() and free()</a>
+                            <span class="highlight">(Oct 2025)</span>
+                        </h3>
+                        <p>
+                            Exploring memory allocators, heap management, and common pitfalls in manual memory management.
+                        </p>
+                        <div class="post-tags">
+                            <span class="tag">C</span>
+                            <span class="tag">Memory</span>
+                            <span class="tag">Low-Level</span>
+                        </div>
+                    </article>
+
+                    <article class="blog-post" data-tags="Linux,System Calls,Assembly">
+                        <h3 id="post-5">
+                            <a href="#">Introduction to System Calls</a>
+                            <span class="highlight">(Sep 2025)</span>
+                        </h3>
+                        <p>
+                            How user-space programs communicate with the kernel, system call mechanisms, 
+                            and practical examples in C and Assembly.
+                        </p>
+                        <div class="post-tags">
+                            <span class="tag">Linux</span>
+                            <span class="tag">System Calls</span>
+                            <span class="tag">Assembly</span>
+                        </div>
+                    </article>
+                </section>
+
+                <section id="webdev">
+                    <h2>Web Development</h2>
+                    
+                    <article class="blog-post" data-tags="CSS,Web,Design">
+                        <h3 id="post-6">
+                            <a href="#">Modern CSS Without Frameworks</a>
+                            <span class="highlight">(Aug 2025)</span>
+                        </h3>
+                        <p>
+                            Building responsive, maintainable websites using modern CSS features like Grid, 
+                            Custom Properties, and Container Queries.
+                        </p>
+                        <div class="post-tags">
+                            <span class="tag">CSS</span>
+                            <span class="tag">Web</span>
+                            <span class="tag">Design</span>
+                        </div>
+                    </article>
+
+                    <article class="blog-post" data-tags="Web,Performance,Architecture">
+                        <h3 id="post-7">
+                            <a href="#">Static Site Generation vs Server-Side Rendering</a>
+                            <span class="highlight">(Jul 2025)</span>
+                        </h3>
+                        <p>
+                            Comparing different approaches to web rendering, when to use each, 
+                            and the trade-offs involved.
+                        </p>
+                        <div class="post-tags">
+                            <span class="tag">Web</span>
+                            <span class="tag">Performance</span>
+                            <span class="tag">Architecture</span>
+                        </div>
+                    </article>
+                </section>
+
+                <section id="tools">
+                    <h2>Tools & CLI</h2>
+                    
+                    <article class="blog-post" data-tags="Terminal,Productivity,Tools">
+                        <h3 id="post-8">
+                            <a href="#">My Terminal Setup for Maximum Productivity</a>
+                            <span class="highlight">(Jun 2025)</span>
+                        </h3>
+                        <p>
+                            A walkthrough of my terminal environment: shell configuration, essential tools, 
+                            keybindings, and workflow automation.
+                        </p>
+                        <div class="post-tags">
+                            <span class="tag">Terminal</span>
+                            <span class="tag">Productivity</span>
+                            <span class="tag">Tools</span>
+                        </div>
+                    </article>
+
+                    <article class="blog-post" data-tags="Git,Workflow,DevOps">
+                        <h3 id="post-9">
+                            <a href="#">Git Workflows That Actually Work</a>
+                            <span class="highlight">(May 2025)</span>
+                        </h3>
+                        <p>
+                            Practical Git strategies for solo developers and teams, including branching models, 
+                            commit conventions, and automation.
+                        </p>
+                        <div class="post-tags">
+                            <span class="tag">Git</span>
+                            <span class="tag">Workflow</span>
+                            <span class="tag">DevOps</span>
+                        </div>
+                    </article>
+                </section>
+
+                <section id="thoughts">
+                    <h2>Thoughts & Learning</h2>
+                    
+                    <article class="blog-post" data-tags="Learning,Philosophy,Growth">
+                        <h3 id="post-10">
+                            <a href="#">On Learning by Building</a>
+                            <span class="highlight">(Apr 2025)</span>
+                        </h3>
+                        <p>
+                            Why building projects — even failed ones — teaches more than tutorials ever could, 
+                            and embracing the messy process of learning.
+                        </p>
+                        <div class="post-tags">
+                            <span class="tag">Learning</span>
+                            <span class="tag">Philosophy</span>
+                            <span class="tag">Growth</span>
+                        </div>
+                    </article>
+
+                    <article class="blog-post" data-tags="Philosophy,Software Engineering,Career">
+                        <h3 id="post-11">
+                            <a href="#">The Myth of Perfection in Software</a>
+                            <span class="highlight">(Mar 2025)</span>
+                        </h3>
+                        <p>
+                            Reflections on perfectionism, shipping incomplete work, and the value of iteration 
+                            over endless refinement.
+                        </p>
+                        <div class="post-tags">
+                            <span class="tag">Philosophy</span>
+                            <span class="tag">Software Engineering</span>
+                            <span class="tag">Career</span>
+                        </div>
+                    </article>
+                </section>
+
+                <section id="archives">
+                    <h2>More Writing</h2>
+                    <p>
+                        For more in-depth technical articles, visit my main blogs:
+                    </p>
+                    <ul>
+                        <li>
+                            <a href="https://saeeedhany.github.io/sigfault.log/" target="_blank"><strong>sigfault.log</strong></a> – 
+                            Deep dives into systems programming, low-level concepts, and computer architecture
+                        </li>
+                        <li>
+                            <a href="https://saeeedhany.github.io/takallam/" target="_blank"><strong>Takallam</strong></a> – 
+                            Arabic blog covering programming concepts and tech discussions for the local community
+                        </li>
+                    </ul>
+                </section>
+            </main>
+
+            <!-- Sidebar -->
+            <aside class="sidebar">
+                <h3>On this page</h3>
+                <ul class="sidebar-nav">
+                    <li><a href="#recent">Recent Posts</a></li>
+                    <li><a href="#systems">Systems & Low-Level</a></li>
+                    <li><a href="#webdev">Web Development</a></li>
+                    <li><a href="#tools">Tools & CLI</a></li>
+                    <li><a href="#thoughts">Thoughts & Learning</a></li>
+                </ul>
+            </aside>
+        </div>
+
+        <script src="main.js"></script>
+        <script src="blog-filter.js"></script>
+    </body>
+</html>
