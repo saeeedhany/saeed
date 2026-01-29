@@ -118,6 +118,21 @@ nav {
     color: var(--text-primary);
 }
 
+.external-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+}
+
+.external-link i {
+    font-size: 0.75rem;
+    opacity: 0.7;
+}
+
+.external-link:hover i {
+    opacity: 1;
+}
+
 .nav-mobile-links {
     margin-top: 40%;
     list-style-type: none; 
