@@ -660,6 +660,8 @@ article.blog-post {
 .tech {
     position: relative;
     cursor: pointer;
+    /* animation: colorPulse 4.5s ease-in-out infinite; */
+    /* transition: color 0.25s ease; */
 }
 
 .notech {
@@ -677,6 +679,16 @@ article.blog-post {
         opacity 0.2s ease,
         transform 0.2s ease;
     z-index: 1000;
-    /* filter: drop-shadow(0 0 8px rgba(0,150,255,0.5)); */
 }
 
+/* @keyframes colorPulse { */
+/*     0% { */
+/*         color: #69d1d9; */
+/*     } */
+/*     50% { */
+/*         color: #458588; */
+/*     } */
+/*     100% { */
+/*         color: #69d1d9; */
+/*     } */
+/* } */
