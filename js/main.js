@@ -208,3 +208,27 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 });
+
+const techs = document.querySelectorAll(".tech");
+const icon = document.getElementById("tech-icon");
+
+techs.forEach(tech => {
+
+    tech.addEventListener("mouseenter", () => {
+        icon.src = tech.dataset.icon;
+        icon.style.opacity = "1";
+        icon.style.transform = "scale(1)";
+    });
+
+    tech.addEventListener("mouseleave", () => {
+        icon.style.opacity = "0";
+        icon.style.transform = "scale(0.8)";
+    });
+
+    tech.addEventListener("mousemove", (e) => {
+        icon.style.left = e.clientX + 15 + "px";
+        icon.style.top  = e.clientY + 15 + "px";
+    });
+
+});
+

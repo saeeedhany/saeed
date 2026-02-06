@@ -656,3 +656,27 @@ article.blog-post {
     color: var(--text-muted);
     font-style: italic;
 }
+
+.tech {
+    position: relative;
+    cursor: pointer;
+}
+
+.notech {
+    color: var(--text-secondary)
+}
+
+#tech-icon {
+    position: fixed;
+    width: 40px;
+    height: 40px;
+    pointer-events: none;
+    opacity: 0;
+    transform: scale(0.8);
+    transition: 
+        opacity 0.2s ease,
+        transform 0.2s ease;
+    z-index: 1000;
+    /* filter: drop-shadow(0 0 8px rgba(0,150,255,0.5)); */
+}
+
