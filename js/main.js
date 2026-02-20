@@ -68,6 +68,7 @@ let currentTheme = 'cyber';
 
 const THEME_TEXT = {
     cyber: {
+        img:     './assets/images/cyberme.png',
         title:   'Pseudointellectual',
         sys:     'SYS://BIO.EXE',
         photo:   'VISUAL IDENT // CONFIRMED',
@@ -79,6 +80,7 @@ const THEME_TEXT = {
         icon:    '◈',
     },
     gothic: {
+        img:     './assets/images/gothlow.png',
         title:   'PRATTLE ✦  BOSS',
         sys:     '⚔ REGISTRY OF SOULS',
         photo:   'LIKENESS  ✦  VERIFIED',
@@ -100,6 +102,7 @@ function toggleTheme() {
     document.documentElement.setAttribute('data-theme', currentTheme);
 
     const tx = THEME_TEXT[currentTheme];
+    document.querySelector('.photo-frame img').src     = tx.img;
     document.getElementById('card-title').textContent  = tx.title;
     document.getElementById('sys-label').textContent   = tx.sys;
     document.getElementById('photo-label').textContent = tx.photo;
