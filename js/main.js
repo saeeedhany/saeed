@@ -79,7 +79,7 @@ const THEME_TEXT = {
         icon:    '◈',
     },
     gothic: {
-        title:   'NONESENCE ✦  BOSS',
+        title:   'PRATTLE ✦  BOSS',
         sys:     '⚔ REGISTRY OF SOULS',
         photo:   'LIKENESS  ✦  VERIFIED',
         bio:     '✦ On the Nature of the Subject',
@@ -115,13 +115,17 @@ function toggleTheme() {
         el.textContent = tx.icon;
     });
 
-    // Pause scan sweep in gothic, resume in cyber
+    // Hide scan sweep in gothic, restore in cyber
     const sweep = document.querySelector('.scan-sweep');
     if (currentTheme === 'gothic') {
-        sweep.style.animationPlayState = 'paused';
+        sweep.style.animation = 'none';
         sweep.style.opacity = '0';
+        sweep.style.top = '-10px';
     } else {
-        sweep.style.animationPlayState = 'running';
         sweep.style.opacity = '';
+        sweep.style.top = '';
+        sweep.style.animation = 'none';
+        sweep.offsetHeight;
+        sweep.style.animation = '';
     }
 }
