@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="cyber">
+    <head>
+        <link rel="stylesheet" href="css/style.css" />
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>SAEED.HANY</title>
+        <style>
+        </style>
+    </head>
+    <body>
+
+        <div id="flash"></div>
+        <div id="grain"></div>
+        <div id="grid-bg"></div>
+
+        <div id="boot">
+            <div id="boot-lines"></div>
+            <div class="boot-bar-wrap" id="barWrap">
+                <div class="boot-bar-label">INITIALIZING PROFILE...</div>
+                <div class="boot-bar-track">
+                    <div class="boot-bar-fill" id="barFill"></div>
+                    <div class="boot-bar-pct" id="barPct">0%</div>
+                </div>
+            </div>
+        </div>
+
+        <div id="toggle-wrap">
+            <div id="theme-toggle" onclick="toggleTheme()">
+                <div class="tog-half cyber-half">◈ CYBER</div>
+                <div class="tog-divider"></div>
+                <div class="tog-half gothic-half">⚔ GOTHIC</div>
+            </div>
+        </div>
+
+        <div id="main">
+            <div class="card">
+                <div class="cc1"></div>
+                <div class="cc2"></div>
+                <div class="rivet rivet-tl"></div>
+                <div class="rivet rivet-tr"></div>
+                <div class="rivet rivet-bl"></div>
+                <div class="rivet rivet-br"></div>
+
+                <div class="card-header">
+                    <div class="dots"><div class="dot"></div><div class="dot"></div><div class="dot"></div></div>
+                    <div class="gothic-crest">✦</div>
+                    <div class="subject" id="card-title">SUBJECT A-34</div>
+                    <span id="sys-label">SYS://BIO.EXE</span>
+                </div>
+
+                <div class="card-body">
+                    <div class="photo-section">
+                        <div class="photo-frame">
+                            <img src="./assets/images/nerdme.png" alt="TORRA.TAHA">
+                            <div class="photo-tint"></div>
+                            <div class="scan-sweep"></div>
+                            <div class="gothic-vignette"></div>
+                            <div class="fc fc-tl"></div>
+                            <div class="fc fc-tr"></div>
+                            <div class="fc fc-bl"></div>
+                            <div class="fc fc-br"></div>
+                            <div class="gothic-ornament go-tl"></div>
+                            <div class="gothic-ornament go-tr"></div>
+                            <div class="gothic-ornament go-bl"></div>
+                            <div class="gothic-ornament go-br"></div>
+                        </div>
+                        <div class="photo-label" id="photo-label">VISUAL IDENT // CONFIRMED</div>
+                    </div>
+
+                    <!-- INFO -->
+                    <div class="info-section">
+                        <div class="field"><div class="fl">Name</div>         <div class="fv name-v">SAEED HANY</div></div>
+                        <div class="field"><div class="fl">Incept Date</div>  <div class="fv">05/09/2004</div></div>
+                        <div class="field"><div class="fl">Function</div>     <div class="fv">Digital Crafter</div></div>
+                        <div class="field"><div class="fl">Mental State</div> <div class="fv bad">UNSTABLE</div></div>
+                        <div class="field"><div class="fl">Location</div>     <div class="fv unk">— — — —</div></div>
+                        <div class="field"><div class="fl">Threat Lvl</div>   <div class="fv"><span class="stars">★ ★ ★</span></div></div>
+                        <div class="field"><div class="fl">Skills</div>       <div class="fv">Web // OS // ML</div></div>
+                    </div>
+
+                </div>
+
+                <div class="section-divider">⚜</div>
+                <div class="bio-section">
+                    <div class="slabel" id="bio-label">// SUBJECT PROFILE</div>
+                    <p class="bio-text">
+                        Operating between system internals and modern web infrastructure.
+                        Focused on operating systems, computer architecture, and performance-driven web development.
+                        Specialized in clean code, scalable structure, and SEO optimization.
+                        Building systems — from kernels to browsers.
+                    </p>
+                </div>
+
+                <div class="section-divider">⚜</div>
+                <div class="links-section">
+                    <div class="slabel" id="links-label">// ACCESS NODES</div>
+                    <div class="links-grid">
+                        <a href="https://saeeedhany.github.io/" class="link-btn"><span class="li">◈</span> PORTFOLIO</a>
+                        <a href="https://github.com/saeeedhany" class="link-btn"><span class="li">◈</span> GITHUB</a>
+                        <a href="https://steamcommunity.com/profiles/76561199169546530" class="link-btn"><span class="li">◈</span> STEAM</a>
+                        <a href="https://discord.com/users/1098257642356482099" class="link-btn"><span class="li">◈</span> DISCORD</a>
+                        <a href="https://www.youtube.com/@Saeeedhany" class="link-btn"><span class="li">◈</span> YOUTUBE</a>
+                        <a href="https://www.reddit.com/user/s_saeed_1/" class="link-btn"><span class="li">◈</span> REDDIT</a>
+                        <a href="https://x.com/S8eed_" class="link-btn"><span class="li">◈</span> TWITTER / X</a>
+                        <a href="mailto:alsaeedalbasi0ny@gmail.com" class="link-btn"><span class="li">◈</span> MAILME</a>
+                    </div>
+                </div>
+
+                <div class="card-footer">
+                    <span id="footer-left">SYS.ACTIVE</span>
+                    <svg class="wsvg" viewBox="0 0 160 20" xmlns="http://www.w3.org/2000/svg">
+                        <polyline class="wp" points="0,10 10,4 20,16 30,2 40,18 50,8 60,14 70,5 80,15 90,7 100,13 110,3 120,17 130,9 140,11 150,6 160,10" stroke-width="1.5" fill="none"/>
+                    </svg>
+                    <div class="gothic-footer-ornament">— ✦ —</div>
+                    <span id="clock">--:--:--</span>
+                </div>
+
+            </div>
+
+            <div class="status-bar">
+                <div class="sdot"></div>
+                <span>ONLINE</span>
+                <span id="sep1">//</span>
+                <span>UPLINK SECURE</span>
+                <span id="sep2">//</span>
+                <span id="theme-label">THEME:CYBER</span>
+            </div>
+        </div>
+
+        <script src="./js/main.js">
+        </script>
+    </body>
+</html>
