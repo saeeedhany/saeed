@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="cyber">
+<html lang="en" data-theme="cyber" data-sub="1">
     <head>
         <link rel="stylesheet" href="css/style.css" />
         <meta charset="UTF-8">
@@ -11,7 +11,9 @@
         <div id="flash"></div>
         <div id="grain"></div>
         <div id="grid-bg"></div>
+        <canvas id="matrix-canvas"></canvas>
 
+        <!-- BOOT -->
         <div id="boot">
             <div id="boot-lines"></div>
             <div class="boot-bar-wrap" id="barWrap">
@@ -25,14 +27,20 @@
 
         <!-- THEME TOGGLE -->
         <div id="toggle-wrap">
-            <div id="theme-toggle" onclick="toggleTheme()">
-                <div class="tog-half cyber-half">◈ CYBER</div>
-                <div class="tog-divider"></div>
-                <div class="tog-half gothic-half">⚔ GOTHIC</div>
+            <div id="controls-row">
+                <div id="theme-toggle" onclick="toggleTheme()">
+                    <div class="tog-half cyber-half">◈ CYBER</div>
+                    <div class="tog-divider"></div>
+                    <div class="tog-half gothic-half">⚔ GOTHIC</div>
+                </div>
+                <div id="sub-toggle">
+                    <button class="sub-btn active" data-v="1" onclick="setSub(1)">I</button>
+                    <button class="sub-btn"        data-v="2" onclick="setSub(2)">II</button>
+                </div>
             </div>
         </div>
 
-        <div id="main">
+        <div id="main" class="layout-standard">
             <div class="card">
                 <div class="cc1"></div>
                 <div class="cc2"></div>
@@ -49,10 +57,9 @@
                 </div>
 
                 <div class="card-body">
-
                     <div class="photo-section">
                         <div class="photo-frame">
-                            <img src="./assets/images/cyberme.png" alt="saeedhany">
+                            <img src="./assets/images/cyberme.png" alt="saeedhany" id="profile-img">
                             <div class="photo-tint"></div>
                             <div class="scan-sweep"></div>
                             <div class="gothic-vignette"></div>
@@ -77,7 +84,6 @@
                         <div class="field"><div class="fl">Threat Lvl</div>   <div class="fv"><span class="stars">★ ★ ★</span></div></div>
                         <div class="field"><div class="fl">Skills</div>       <div class="fv">Web // OS // ML</div></div>
                     </div>
-
                 </div>
 
                 <div class="section-divider">⚜</div>
@@ -95,14 +101,14 @@
                 <div class="links-section">
                     <div class="slabel" id="links-label">// ACCESS NODES</div>
                     <div class="links-grid">
-                        <a href="https://saeeedhany.github.io/" class="link-btn" target="_blank"><span class="li">◈</span> PORTFOLIO</a>
-                        <a href="https://github.com/saeeedhany" class="link-btn" target="_blank"><span class="li">◈</span> GITHUB</a>
-                        <a href="https://steamcommunity.com/profiles/76561199169546530" class="link-btn" target="_blank"><span class="li">◈</span> STEAM</a>
-                        <a href="https://discord.com/users/1098257642356482099" class="link-btn" target="_blank"><span class="li">◈</span> DISCORD</a>
-                        <a href="https://www.youtube.com/@Saeeedhany" class="link-btn" target="_blank"><span class="li">◈</span> YOUTUBE</a>
-                        <a href="https://www.reddit.com/user/s_saeed_1/" class="link-btn" target="_blank"><span class="li">◈</span> REDDIT</a>
-                        <a href="https://x.com/S8eed_" class="link-btn"><span class="li" target="_blank">◈</span> TWITTER / X</a>
-                        <a href="mailto:alsaeedalbasi0ny@gmail.com" class="link-btn" target="_blank"><span class="li">◈</span> MAILME</a>
+                        <a href="https://saeeedhany.github.io/"                          class="link-btn"><span class="li">◈</span> PORTFOLIO</a>
+                        <a href="https://github.com/saeeedhany"                          class="link-btn"><span class="li">◈</span> GITHUB</a>
+                        <a href="https://steamcommunity.com/profiles/76561199169546530"   class="link-btn"><span class="li">◈</span> STEAM</a>
+                        <a href="https://discord.com/users/1098257642356482099"           class="link-btn"><span class="li">◈</span> DISCORD</a>
+                        <a href="https://www.youtube.com/@Saeeedhany"                    class="link-btn"><span class="li">◈</span> YOUTUBE</a>
+                        <a href="https://www.reddit.com/user/s_saeed_1/"                 class="link-btn"><span class="li">◈</span> REDDIT</a>
+                        <a href="https://x.com/S8eed_"                                   class="link-btn"><span class="li">◈</span> TWITTER / X</a>
+                        <a href="mailto:alsaeedalbasi0ny@gmail.com"                      class="link-btn"><span class="li">◈</span> MAILME</a>
                     </div>
                 </div>
 
@@ -114,16 +120,109 @@
                     <div class="gothic-footer-ornament">— ✦ —</div>
                     <span id="clock">--:--:--</span>
                 </div>
-
             </div>
 
+            <!-- STATUS BAR (shared) -->
             <div class="status-bar">
                 <div class="sdot"></div>
                 <span>ONLINE</span>
                 <span id="sep1">//</span>
                 <span>UPLINK SECURE</span>
                 <span id="sep2">//</span>
-                <span id="theme-label">THEME:CYBER</span>
+                <span id="theme-label">THEME:CYBER:V1</span>
+            </div>
+            <!-- VISITOR COUNTER (gothic only) -->
+            <div class="visitor-counter" id="visitor-counter">
+                <span class="vc-label">SOULS ENCOUNTERED</span>
+                <span class="vc-count">——</span>
+            </div>
+        </div>
+
+        <div id="main-matrix">
+
+            <div class="mx-container">
+
+                <!-- LEFT: photo + terminal bio -->
+                <div class="mx-left">
+                    <div class="mx-photo-wrap">
+                        <img src="./assets/images/cyberme.png" alt="saeedhany" id="matrix-img">
+                        <div class="mx-scan"></div>
+                        <div class="mx-corner mx-tl"></div>
+                        <div class="mx-corner mx-tr"></div>
+                        <div class="mx-corner mx-bl"></div>
+                        <div class="mx-corner mx-br"></div>
+                        <div class="mx-glitch-bar"></div>
+                    </div>
+                    <div class="mx-terminal-bio">
+                        <span class="mx-prompt">root@void:~$</span>
+                        <span class="mx-cmd"> cat subject.log</span>
+                        <div class="mx-output">
+                            <div>> NAME........: SAEED HANY</div>
+                            <div>> BORN........: 05/09/2004</div>
+                            <div>> FUNCTION....: DIGITAL CRAFTER</div>
+                            <div>> STATUS......: <span style="color:#ff3030">UNSTABLE</span></div>
+                            <div>> SKILLS......: WEB / OS / ML</div>
+                            <div>> THREAT......: ★★★</div>
+                        </div>
+                        <span class="mx-cursor">█</span>
+                    </div>
+                </div>
+
+                <!-- RIGHT: info panels -->
+                <div class="mx-right">
+                    <div class="mx-header">
+                        <div class="mx-tag">// SYSTEM ENTITY</div>
+                        <div class="mx-name">Pseudointellectual</div>
+                        <div class="mx-sub">SYS://MATRIX.EXE &nbsp;|&nbsp; UPLINK ACTIVE</div>
+                    </div>
+
+                    <div class="mx-bio-panel">
+                        <div class="mx-panel-label">&gt; BIO_DUMP.txt</div>
+                        <p>
+                            Operating between system internals and modern web infrastructure.
+                            Focused on operating systems, computer architecture, and performance-driven web development.
+                            Specialized in clean code, scalable structure, and SEO optimization.
+                            Building systems — from kernels to browsers.
+                        </p>
+                    </div>
+
+                    <div class="mx-links-panel">
+                        <div class="mx-panel-label">&gt; ACCESS_NODES</div>
+                        <div class="mx-links">
+                            <a href="https://saeeedhany.github.io/"                        class="mx-link"><span>01</span> PORTFOLIO</a>
+                            <a href="https://github.com/saeeedhany"                        class="mx-link"><span>02</span> GITHUB</a>
+                            <a href="https://steamcommunity.com/profiles/76561199169546530" class="mx-link"><span>03</span> STEAM</a>
+                            <a href="https://discord.com/users/1098257642356482099"         class="mx-link"><span>04</span> DISCORD</a>
+                            <a href="https://www.youtube.com/@Saeeedhany"                  class="mx-link"><span>05</span> YOUTUBE</a>
+                            <a href="https://www.reddit.com/user/s_saeed_1/"               class="mx-link"><span>06</span> REDDIT</a>
+                            <a href="https://x.com/S8eed_"                                 class="mx-link"><span>07</span> TWITTER / X</a>
+                            <a href="mailto:alsaeedalbasi0ny@gmail.com"                    class="mx-link"><span>08</span> MAILME</a>
+                        </div>
+                    </div>
+
+                    <div class="mx-footer">
+                        <span id="mx-clock">--:--:--</span>
+                        <span>//</span>
+                        <span>MATRIX.V2</span>
+                        <span>//</span>
+                        <span>ENTITY ONLINE</span>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- STATUS BAR for matrix -->
+            <div class="status-bar mx-status">
+                <div class="sdot"></div>
+                <span>ONLINE</span>
+                <span>//</span>
+                <span>UPLINK SECURE</span>
+                <span>//</span>
+                <span>THEME:CYBER:V2</span>
+            </div>
+            <div class="visitor-counter">
+                <span class="vc-label">VISITORS LOGGED</span>
+                <span class="vc-count">——</span>
             </div>
         </div>
 
